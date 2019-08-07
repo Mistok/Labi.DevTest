@@ -1,0 +1,166 @@
+.menu {
+  width: 260px;
+  background-color: $grey;
+  border-radius: 4px;
+  margin-right: 20px;
+  padding: 15px 20px 0px 10px;
+  font-size: 14px;
+  position: relative;
+  left: 0;
+  transition: 1s;
+  label{
+    display: block;
+  }
+}
+.menu_button{
+  display: none;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border: 3px solid $primary;
+  background-color: $grey;
+  color: $textGrey;
+  z-index: 101;
+  i{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: $primary;
+    transition: 700ms;
+    transform: rotate(0deg);
+  }
+}
+.filter_sub_title{
+  display: block;
+  color: $black;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+// Subcategory block styles
+.subcategory{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  .subcategory_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  input[type='checkbox']{
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+    color: $primary;
+    margin-right: 10px;
+  }
+  input[type="checkbox"]+ label{
+    padding-left: 30px;
+    position: relative;
+  }
+  input[type="checkbox"]+ label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    border: 1px solid darken($grey,15);
+    margin: 0 5px 0 0;
+    background: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  input[type="checkbox"]:checked + label::before{
+      background-image: url(../../img/icon_checked_blue.png);
+  }
+}
+
+.form-control-sm{
+  margin-bottom: 25px;
+}
+//Client rating block styles
+.client_rating{
+  padding: 0;
+  margin-bottom: 15px;
+  .client_rating_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  // Include unrated freelancers radiobutton styles
+  input[type="radio"]+ label{
+    padding-left: 30px;
+    position: relative;
+  }
+  input[type="radio"]+ label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 1px solid darken($grey,15);
+    margin: 0 5px 0 0;
+    background: $white;
+    background-repeat: no-repeat;
+    background-position: -2px -2px;
+  }
+  input[type="radio"]:checked + label::before{
+    background-image: url(../../img/icon_circle.png);
+  }
+  // Include unrated freelancers checkbox styles
+  input[type="checkbox"]+ label{
+    padding-left: 30px;
+    position: relative;
+  }
+  input[type="checkbox"]+ label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    border: 1px solid darken($grey,15);
+    margin: 0 5px 0 0;
+    background: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  input[type="checkbox"]:checked + label::before{
+    background-image: url(../../img/icon_checked_green.png);
+  }
+}
+@media screen and (max-width: 786px) {
+  .menu{
+    position: absolute;
+    left: -270px;
+    top: 20px;
+    z-index: 10;
+    transition: 1s;
+  }
+  .menu_button{
+    right: -55px;
+    display: inline-block;
+  }
+  .menu_visible{
+    left: 0;
+  }
+  .menu_button_opened{
+    right: -15px;
+    i{
+      transform: rotate(540deg);
+    }
+  }
+}

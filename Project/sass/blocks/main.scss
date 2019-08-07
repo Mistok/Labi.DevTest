@@ -1,0 +1,96 @@
+.offer-container{
+  min-height: 500px;
+  position: relative;
+  flex-grow: 2;
+}
+.offer{
+  margin-bottom: 20px;
+  min-height: 220px;
+  border-radius: 4px;
+  border: 1px solid $grey;
+  padding: 15px 20px;
+}
+.offer_title{
+  font-size: 20px;
+  color: $primary;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.offer_description{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 25px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.offer_devider{
+  color: $textGrey;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.offer_description_item{
+  list-style: none;
+  font-size: 11px;
+  position: relative;
+}
+.offer_description_item_title, .offer_feature_item_title{
+  color: $textGrey;
+  font-size: 12px;
+}
+.offer_item_text{
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.offer_category{
+  font-size: 12px;
+  display: inline-block;
+}
+
+// Offer skills section styles
+.offer_skills{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.offer_skills_item, .offer_skills_more{
+  list-style: none;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-right: 6px;
+  background: $grey;
+  color: $textGrey;
+  white-space: nowrap;
+}
+.offer_skills_more{
+  background-color: transparent;
+  color: $primary ;
+  cursor: pointer;
+}
+
+// Offer rating styles
+.offer_client{
+  color: $textGrey;
+}
+.offer_rating_container{
+  font-size: 12px;
+}
+.offer_country {
+  font-size: 11px;
+  color: #121300;
+}
+.golden_star{
+  color: $gold;
+}
+
+@media screen and (max-width: 855px){
+  .offer_description{
+    justify-content: start;
+  }
+}

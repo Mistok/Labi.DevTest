@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>TestTask</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+</head>
+<body>
+<section class="first">
+  <div class="container">
+    <aside class="menu">
+        <figure class="menu_button"><i class="fas fa-arrow-right"></i></figure>
+      <form action="post" class="filter">
+
+        <div class="category">
+          <label class="filter_sub_title" for="category">Chose Category</label>
+          <select class="category_select form-control form-control-sm" name="category" id="category">
+            <option value="BestMatch">Best match</option>
+            <option value="BestMatch">Best match</option>
+            <option value="BestMatch">Best match</option>
+            <option value="BestMatch">Best match</option>
+          </select>
+        </div>
+        <ul class="subcategory">
+            <li class="subcategory_item">
+                <input type="checkbox" id="all_subcategory" hidden>
+                <label for="all_subcategory">All subcategory</label>
+            </li>
+            <li class="subcategory_item">
+                <input type="checkbox" id="Data_entry" hidden>
+                <label for="Data_entry">Data Entry (1306)</label>
+            </li>
+            <li class="subcategory_item">
+                <input type="checkbox" id="Personal_assistant" hidden>
+                <label for="Personal_assistant">Personal Assistant (1907)</label>
+            </li>
+            <li class="subcategory_item">
+                <input type="checkbox" id="Web_research" hidden>
+                <label for="Web_research">Web Research (927)</label>
+            </li>
+            <li class="subcategory_item">
+                <input type="checkbox" id="Email_response_handing" hidden>
+                <label for="Email_response_handing">Email Response Handing (80)</label>
+            </li>
+            <li class="subcategory_item">
+                <input type="checkbox" id="Transcription" hidden>
+                <label for="Transcription">Transcription (307)</label>
+            </li>
+            <li class="subcategory_item">
+                <input type="checkbox" id="other" hidden>
+                <label for="other">Other - Administrative support</label>
+            </li>
+        </ul>
+        <ul class="client_rating">
+            <li class="filter_sub_title">Client Rating</li>
+            <li class="client_rating_item">
+                <input type="radio" id="all_stars" value="all_stars" name="client_rating" hidden>
+                <label for="all_stars">All stars</label>
+            </li>
+            <li class="client_rating_item">
+                <input type="radio" id="5_stars" value="5_stars" name="client_rating" hidden>
+                <label for="5_stars">5 stars (930)</label>
+            </li>
+            <li class="client_rating_item">
+                <input type="radio" id="4.5_stars" value="4.5_stars" name="client_rating" hidden>
+                <label for="4.5_stars">4.5 stars and Up (2 591)</label>
+            </li>
+            <li class="client_rating_item">
+                <input type="radio" id="4_stars" value="4_stars" name="client_rating" hidden>
+                <label for="4_stars">4 stars and Up (1 546)</label>
+            </li>
+            <li class="client_rating_item">
+                <input type="checkbox" id="unrated" value="unrated" hidden>
+                <label for="unrated">Include unrated freelancers</label>
+            </li>
+        </ul>
+        <div class="filter_budget">
+          <label for="budget" class="filter_sub_title">Budget</label>
+          <select name="filter_budget_select" class="form-control form-control-sm" id="budget">
+            <option value="Any budget">Any budget</option>
+            <option value="Any budget">5000+</option>
+            <option value="Any budget">2000 - 5000</option>
+            <option value="Any budget">1000 - 2000</option>
+            <option value="Any budget">500 - 1000</option>
+            <option value="Any budget">200 - 500</option>
+            <option value="Any budget">10 - 200</option>
+          </select>
+        </div>
+        <div class="filter_delivery">
+          <label for="delivery" class="filter_sub_title">Delivery</label>
+          <select name="filter_delivery_select" class="form-control form-control-sm" id="delivery">
+            <option value="Any delivery">Any</option>
+            <option value="Any delivery">Any</option>
+            <option value="Any delivery">Any</option>
+            <option value="Any delivery">Any</option>
+          </select>
+        </div>
+        <div class="filter_location">
+          <label for="location" class="filter_sub_title">Location</label>
+          <select name="filter_location_select" class="form-control form-control-sm" id="location">
+            <option value="Any location">Any Location</option>
+            <option value="Any location">Any Location</option>
+            <option value="Any location">Any Location</option>
+            <option value="Any location">Any Location</option>
+          </select>
+        </div>
+      </form>
+    </aside>
+    <main class="offer_container">
+      <div class="offer" id="offer_elem" hidden>
+        <h2 class="offer_title" id="offer_title">SEO Reviev and Recomendations</h2>
+        <ul class="offer_description" id="offer_options">
+            <li class="offer_description_item">
+            <span class="offer_description_item_title">Fixed:</span>
+            <span class="offer_description_item_value_fixed" id="offer_fixed"></span>
+            </li>
+            <li class="offer_devider">|</li>
+            <li class="offer_description_item">
+            <span class="offer_description_item_title">Budget:</span>
+            <span class="offer_description_item_value_budget" id="offer_budget"></span>
+            </li>
+            <li class="offer_devider">|</li>
+            <li class="offer_description_item">
+            <span class="offer_description_item_title">Delivery:</span>
+            <span class="offer_description_item_value_delivery" id="offer_delivery"></span>
+            </li>
+            <li class="offer_devider">|</li>
+            <li class="offer_description_item">
+            <span class="offer_description_item_title">Posted:</span>
+            <span class="offer_description_item_value_posted" id="offer_posted"></span>
+            </li>
+            <li class="offer_devider">|</li>
+            <li class="offer_description_item">
+            <span class="offer_description_item_title">Ends:</span>
+            <span class="offer_description_item_value_ends" id="offer_ends"></span>
+            </li>
+            <li class="offer_devider">|</li>
+            <li class="offer_description_item">
+            <span class="offer_description_item_title">Proposal:</span>
+            <span class="offer_description_item_value_proposals" id="offer_proposal"></span>
+            </li>
+        </ul>
+        <p class="offer_item_text" id="offer_item_text"></p>
+        <div class="offer_features">
+            <div class="offer_category">
+                <span class="offer_feature_item_title">Category:</span>
+                <span class="offer_feature_item_value"> </span>
+            </div>
+            <span class="offer_feature_item_title">Skils</span>
+            <ul class="offer_skills">
+                <!--<li class="offer_skills_more">18 and more</li>-->
+            </ul>
+        </div>
+        <div class="offer_rating_container">
+          <span class="offer_client">Client</span>
+          <span class="offer_country">United States</span>
+          <span class="offer_rating">4.8 </span>
+          <span class="offer_stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </span>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+<section class="second">
+    <div class="container">
+        <form class="pintrest_form">
+            <div class="form-group row">
+                <label for="searchUserInput" class="col-sm-2 col-form-label">Search Pin</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="searchUserInput" placeholder="username">
+                </div>
+                <button class="btn btn-success col-sm-12 mx-auto mt-4" id="searchUserBtn">Search pin!</button>
+            </div>
+        </form>
+    </div>
+    <div class="pintrest_box">
+        <div class="container mt-4 row">
+
+        </div>
+    </div>
+</section>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/all.min.js"></script>
+</body>
+</html>
+
