@@ -42,7 +42,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             offer.getElementsByClassName('offer_feature_item_value')[0].innerText = data.category;
 
+            // Filling empty 'text' field
+
             offer.getElementsByClassName('offer_item_text')[0].innerText = data.description;
+
+            //console.dir(offer.getElementsByClassName('offer_item_text')[0]);
+            offer.getElementsByClassName('offer_item_text')[0].classList.add('hidden_text');
+
+            function addResizeButton(){
+                let more = document.createElement('span');
+                more.innerText = 'more';
+                more.classList = 'offer_more_btn';
+                offer.getElementsByClassName('offer_item_text')[0].appendChild(more);
+
+            }
+            addResizeButton();
+
+
+
+
+
 
             // Filling empty 'skills' field
 
@@ -94,6 +113,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     getContent();
 
+    function addMoreContent() {
+        let btns = document.getElementsByClassName('offer_more_btn');
+        for(let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                this.parentElement.classList.toggle('hidden_text');
+            })
+        }
+    }
+    setTimeout( addMoreContent, 3000);
+
+
     // Hidden menu script
     document.getElementsByClassName('menu_button')[0].onclick = function () {
         document.getElementsByClassName('menu')[0].classList.toggle('menu_visible');
@@ -127,8 +157,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             .catch(console.log(res))
 
     };
-
-
 
 
 });

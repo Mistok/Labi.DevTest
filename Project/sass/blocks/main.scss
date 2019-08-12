@@ -43,7 +43,29 @@
 }
 .offer_item_text{
   font-size: 14px;
+  line-height: 22px;
   margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.8s;
+}
+.hidden_text{
+  max-height: 66px;
+}
+.offer_more_btn{
+  font-size: 14px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  color: $primary;
+  transition: 1s;
+  background-color: $white;
+  cursor: pointer;
+  &:hover{
+
+    color: lighten($primary,15%);
+  }
 }
 .offer_category{
   font-size: 12px;
