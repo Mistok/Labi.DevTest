@@ -40,7 +40,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "node-request": "0.0.3",
     "npm": "^6.9.0",
     "request": "^2.88.0",
